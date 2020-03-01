@@ -118,7 +118,7 @@
 
 
 
-                                    <form action="">
+                                    <form action="UsuariosGridServlet" method="POST">
 
                                         <!-- NOMBRE Y APELLIDOS USUARIO-->
                                         <div class="form-group">
@@ -133,22 +133,21 @@
                                         <div class="form-row">
 
                                             <div class="form-group col-md-6">
-                                                <input type="text" class="form-control" placeholder="First name">
+                                                <input type="text" name="firstName" class="form-control" placeholder="First name">
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <input type="text" class="form-control" placeholder="Last name">
+                                                <input type="text" name="lastName" class="form-control" placeholder="Last name">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Correo Electronico">
+                                            <input type="email" name="inputEmail" class="form-control" id="inputEmail4" placeholder="Correo Electronico">
                                         </div>
 
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                            <input type="password" name="inputPassword" class="form-control" id="inputPassword4" placeholder="Password">
                                         </div>
                                         <div class="form-group">
-
-                                            <input type="text" class="form-control" id="inputAddress" placeholder="Direccion">
+                                            <input type="text" class="form-control" name="inputAddress" id="inputAddress" placeholder="Direccion">
                                         </div>
 
 
@@ -212,7 +211,7 @@
                                 <!-- contendo form usuario-->
                                 <div class="row justify-content-md-center">
 
-                                    <form action="">
+                                  <form action="UsuariosGridServlet" method="POST">
 
                                         <!-- NOMBRE Y APELLIDOS USUARIO-->
                                         <div class="form-group">
@@ -226,45 +225,47 @@
                                         <div class="form-row">
 
                                             <div class="form-group col-md-6">
-                                                <input type="text" class="form-control" placeholder="First name">
+                                                <input type="text" name="firstName" class="form-control" placeholder="First name">
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <input type="text" class="form-control" placeholder="Last name">
+                                                <input type="text" name="lastName" class="form-control" placeholder="Last name">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Correo Electronico">
+                                            <input type="email" name="inputEmail"  class="form-control" id="inputEmail4" placeholder="Correo Electronico">
                                         </div>
 
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                            <input type="password" name="inputPassword" class="form-control" id="inputPassword4" placeholder="Password">
                                         </div>
                                         <div class="form-group">
 
-                                            <input type="text" class="form-control" id="inputAddress" placeholder="Direccion">
+                                            <input type="text" name="inputAddress" class="form-control" id="inputAddress" placeholder="Direccion">
                                         </div>
 
 
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <select id="inputCiudad" class="form-control">
-                <option selected>Ciudad o Poblacion...</option>
-                <option>Guadalajara</option>
-                <option>Zapopan</option>
-                <option>ZMG</option>
-              </select>
+                                                <select id="inputCiudad" name="inputCity"  class="form-control">
+									                <option selected>Ciudad o Poblacion...</option>
+									                <option>Guadalajara</option>
+									                <option>Zapopan</option>
+									                <option>ZMG</option>
+									             </select>
                                             </div>
                                             <div class="form-group col-md-4">
-                                                <select id="inputState" class="form-control">
-        <option selected>Estado...</option>
-        <option>Jalisco</option>                                
-      </select>
+                                                <select id="inputState" class="form-control" name="inputState">
+											        <option selected>Estado...</option>
+											        <option>Jalisco</option>                                
+											     </select>
                                             </div>
                                             <div class="form-group col-md-2">
-                                                <input type="text" class="form-control" id="inputZip" placeholder="C.P">
+                                                <input type="text" class="form-control" id="inputZip" placeholder="C.P" name="inputCP">
                                             </div>
                                         </div>
                                         <hr class="my-4">
+                                        
+                                        
                                         <!-- DIVISION DE FORMULARIO -->
                                         <div class="form-row">
                                             <!-- Check box de privilegios -->
