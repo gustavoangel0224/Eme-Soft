@@ -7,9 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name="User")
-public class Register {
+@Table(name="usergrid")
+public class Usuarios {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,22 +23,29 @@ public class Register {
 	@Column(name="lastname")
 	private String lastname;
 	
-	@Column(name="phone")
-	private String phone;
-	
 	@Column(name="email")
 	private String email;
 	
 	@Column(name="password")
 	private String password;
 	
-	@Column(name="corporation")
-	private String corporation;
+	@Column(name="address")
+	private String address;
 	
-	@Column(name="privilegies")
-	private String privilegies;
+	@Column(name="city")
+	private String city;
 	
+	@Column(name="state")
+	private String state;
 	
+	@Column(name="cp")
+	private String cp;
+	
+	@Column(name="register")
+	private String register;
+	
+	@Column(name="machine")
+	private String machine;
 
 	public int getIdUser() {
 		return idUser;
@@ -53,14 +61,6 @@ public class Register {
 
 	public void setFirtsname(String firtsname) {
 		this.firtsname = firtsname;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
 	}
 
 	public String getLastname() {
@@ -79,14 +79,6 @@ public class Register {
 		this.email = email;
 	}
 
-	public String getCorporation() {
-		return corporation;
-	}
-
-	public void setCorporation(String corporation) {
-		this.corporation = corporation;
-	}
-
 	public String getPassword() {
 		return password;
 	}
@@ -95,13 +87,54 @@ public class Register {
 		this.password = password;
 	}
 
-	public String getPrivilegies() {
-		return privilegies;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setPrivilegies(String privilegies) {
-		this.privilegies = privilegies;
+	public void setAddress(String address) {
+		this.address = address;
 	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCp() {
+		return cp;
+	}
+
+	public void setCp(String cp) {
+		this.cp = cp;
+	}
+
+	public String getRegister() {
+		return register;
+	}
+
+	public void setRegister(String register) {
+		this.register = register;
+	}
+
+	public String getMachine() {
+		return machine;
+	}
+
+	public void setMachine(String machine) {
+		this.machine = machine;
+	}
+	
 	
 	
 	

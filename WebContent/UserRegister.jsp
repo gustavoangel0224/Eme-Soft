@@ -31,10 +31,6 @@
                             <input type="text" id="inputEmpresa" name="inputCorporation" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
                             <label for="inputEmpresa">Nombre de Empresa</label>
                         </div>
-                        <div class="form-label-group">
-                            <input type="text" id="inputPrivilegies" name="inputPrivilegies" class="form-control" placeholder="Privilegies" required="required" autofocus="autofocus">
-                            <label for="inputPrivilegies">Privilegios</label>
-                        </div>
                     </div>
                     <div class="form-group">
                         <div class="form-row">
@@ -86,7 +82,7 @@
                 <div class="text-center">
                     <a class="d-block small mt-3" href="login.html">Ya estoy Registrado</a>
                     <a>_______</a>
-                    <a class="d-block small" href="forgot-password.html">Olvide mi contraseÃ±a?</a>
+                    <a class="d-block small" href="forgot-password.html">Olvide mi contraseña?</a>
                 </div>
             </div>
         </div>

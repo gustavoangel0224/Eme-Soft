@@ -12,19 +12,19 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.emesoft.model.Register;
+import com.emesoft.model.EmployeeRegister;
 
 /**
- * Servlet implementation class RegisterServlet
+ * Servlet implementation class EmployeeRegisterServlet
  */
-@WebServlet("/RegisterServlet")
-public class RegisterServlet extends HttpServlet {
+@WebServlet("/EmployeeRegisterServlet")
+public class EmployeeRegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegisterServlet() {
+    public EmployeeRegisterServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,41 +41,40 @@ public class RegisterServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		Configuration cfg = new Configuration();
-		cfg.addAnnotatedClass(com.emesoft.model.Register.class);//Para que se traiga el esquema
+		cfg.addAnnotatedClass(com.emesoft.model.EmployeeRegister.class);//Para que se traiga el esquema
 		
 		cfg.configure("hibernate.cfg.xml");
 		
-		//Creamos la 
-		SessionFactory factory = cfg.buildSessionFactory();
-		
-		Session session = factory.openSession();
-		
+		//Creamos la conexion
+		SessionFactory factory = cfg.buildSessionFactory();		
+		Session session = factory.openSession();		
 		Transaction t = session.beginTransaction();
 		
-		//Obtencion de datos desde la vista
-		String firtsname = request.getParameter("firstName");
-		String lastname = request.getParameter("lastName");
-		String phone = request.getParameter("inputPhone");
+		String firtsName = request.getParameter("firtsName");
+		String lastName = request.getParameter("lastName");
 		String email = request.getParameter("inputEmail");
-		String password = request.getParameter("confirmPassword");
-		String corporation = request.getParameter("inputCorporation");
-		String privilegies = request.getParameter("inputPrivilegies");
+		String address = request.getParameter("inputAddress");
+		String password = request.getParameter("inputPassword");
+		String city = request.getParameter("inputCity");
+		String state = request.getParameter("inputState");
+		String cp = request.getParameter("inputCP");
+		String register = request.getParameter("inputRegister");
+		String machine = request.getParameter("inputMachine");
 		
-		//Obtencion de modelo
-		Register register=new Register();
+		EmployeeRegister employee = new EmployeeRegister();
+		employee.setFirtsName(firtsName);
+		employee.setLastName(lastName);
+		employee.setEmail(email);
+		employee.setAddres(address);
+		employee.setPassword(password);
+		employee.setCity(city);
+		employee.setState(state);
+		employee.setCP(cp);
+		employee.setRegister(register);
+		employee.setMachine(machine);
 		
-		register.setFirtsname(firtsname);
-		register.setLastname(lastname);
-		register.setPhone(phone);
-		register.setEmail(email);
-		register.setPassword(password);
-		register.setCorporation(corporation);
-		register.setPrivilegies(privilegies);
-		
-
-		session.save(register);
+		session.save(employee);
 		// o persist es igual session.persist(miObjetoLibro);
 		
 		//Ejecuta la transacción
@@ -87,9 +86,9 @@ public class RegisterServlet extends HttpServlet {
 		//Guardado exitosamente
 		
 		//Redireccionando a la pagina
-		response.sendRedirect("login.jsp");
-		//String dire=request.getParameter("");
-        //response.sendRedirect("http://"+dire);
+		response.sendRedirect("EmployeeRegister.jsp");
+		
+		
 	}
 
 }

@@ -84,6 +84,8 @@
         </ul>
 
        </nav> -->
+       
+       
 
     <div id="wrapper">
 
@@ -98,27 +100,59 @@
                         <i class="fas fa-chart-area"></i> Administrador de Usuarios</div>-->
 
                     <span class="text-center badge badge-primary"><h5><i class="fas fa-user-cog"></i>    Panel de Usuarios</h5></span>
+                    
                     <div class="card-body">
                         <!-- Area de prueba-->
-                        <nav>
+                        
+                        <nav><!-- Barra de Navegacion -->
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Vista de Usuarios</a>
                                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-ingeniero" role="tab" aria-controls="nav-profile" aria-selected="false">Agregar Ingeniero</a>
                                 <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-tecnico" role="tab" aria-controls="nav-contact" aria-selected="false">Agregar Tecnico</a>
                             </div>
                         </nav>
+                        
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <table class="table table-responsive table-striped">
+								    <thead>
+								        <tr>
+								            <th>Nombre</th>
+								            <th>Apellidos</th>
+								            <th>Correo Electronico</th>
+								            <th>Dirección</th>
+								            <th>Eliminar Registros</th>
+								            <th>Agregar Maquinas</th>
+								        </tr>
+								    </thead>
+								    <tbody>
+								        <tr>
+								            <td>John</td>
+								            <td>Doe</td>
+								            <td>john@example.com</td>
+								        </tr>
+								        <tr>
+								            <td>Smith</td>
+								            <td>Thomas</td>
+								            <td>smith@example.com</td>
+								        </tr>
+								        <tr>
+								            <td>Merry</td>
+								            <td>Jim</td>
+								            <td>merry@example.com</td>
+								        </tr>
+								    </tbody>
+								</table>
+                            
+                            </div>
+                            
                             <!-- formulario de agregar usuario-->
                             <div class="tab-pane fade" id="nav-ingeniero" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                
                                 <!-- contendo form usuario-->
                                 <div class="row justify-content-md-center">
 
-
-
-
-
-                                    <form action="UsuariosGridServlet" method="POST">
+                                    <form action="EmployeeRegisterServlet" method="POST">
 
                                         <!-- NOMBRE Y APELLIDOS USUARIO-->
                                         <div class="form-group">
@@ -133,7 +167,7 @@
                                         <div class="form-row">
 
                                             <div class="form-group col-md-6">
-                                                <input type="text" name="firstName" class="form-control" placeholder="First name">
+                                                <input type="text" name="firtsName" class="form-control" placeholder="First name">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <input type="text" name="lastName" class="form-control" placeholder="Last name">
@@ -153,21 +187,21 @@
 
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <select id="inputCiudad" class="form-control">
-                                              <option selected>Ciudad o Poblacion...</option>
+                                                <select id="inputCity" name="inputCity" class="form-control">
+                                              <option selected>Ciudad o Poblacion</option>
                                               <option>Guadalajara</option>
                                               <option>Zapopan</option>
                                               <option>ZMG</option>
                                             </select>
                                             </div>
                                             <div class="form-group col-md-4">
-                                                <select id="inputState" class="form-control">
-                                      <option selected>Estado...</option>
-                                      <option>Jalisco</option>                                
-                                    </select>
+                                                <select id="inputState" name="inputState" class="form-control">
+			                                      <option selected>Estado...</option>
+			                                      <option>Jalisco</option>                                
+			                                    </select>
                                             </div>
                                             <div class="form-group col-md-2">
-                                                <input type="text" class="form-control" id="inputZip" placeholder="C.P">
+                                                <input type="text" class="form-control" name="inputCP" id="inputZip" placeholder="C.P">
                                             </div>
                                         </div>
                                         <hr class="my-4">
@@ -176,13 +210,13 @@
                                             <!-- Check box de privilegios -->
                                             <div class="form-group col-md-6">
                                                 <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" name="inputRegister">
                                                     <label class="custom-control-label" for="customSwitch1">Eliminar Registros</label>
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch2" name="inputMachine">
                                                     <label class="custom-control-label" for="customSwitch2">Agregar Nuevas Maquinas</label>
                                                 </div>
                                             </div>
@@ -211,7 +245,7 @@
                                 <!-- contendo form usuario-->
                                 <div class="row justify-content-md-center">
 
-                                  <form action="UsuariosGridServlet" method="POST">
+                                  <form action="EmployeeRegisterServlet" method="POST">
 
                                         <!-- NOMBRE Y APELLIDOS USUARIO-->
                                         <div class="form-group">
@@ -225,7 +259,7 @@
                                         <div class="form-row">
 
                                             <div class="form-group col-md-6">
-                                                <input type="text" name="firstName" class="form-control" placeholder="First name">
+                                                <input type="text" name="firtsName" class="form-control" placeholder="First name">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <input type="text" name="lastName" class="form-control" placeholder="Last name">
@@ -271,13 +305,13 @@
                                             <!-- Check box de privilegios -->
                                             <div class="form-group col-md-6">
                                                 <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch3" name="inputRegister">
                                                     <label class="custom-control-label" for="customSwitch3">Registrar Mantto Realizado</label>
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch4" name="inputMachine">
                                                     <label class="custom-control-label" for="customSwitch4">Enviar Solicitud de Materiales</label>
                                                 </div>
                                             </div>
@@ -289,8 +323,8 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="gridCheck">
                                                 <label class="form-check-label" for="gridCheck">
-        Confirmo que los datos son correctos
-      </label>
+									        Confirmo que los datos son correctos
+									      </label>
                                             </div>
                                         </div>
 

@@ -125,13 +125,13 @@
                     <a class="dropdown-item" id="btnPanelUser" name="btnPanelUser" href="#" role="button">Usuarios</a>
                     <!--se agrega para salida iframe-->
                     <h6 class="dropdown-header">Ver Principales</h6>
-                    <a class="dropdown-item" href="login.html ">Ingenieros</a>
+                    <a class="dropdown-item" href="login.jsp ">Ingenieros</a>
 
-                    <a class="dropdown-item" href="register.html ">Tecnicos</a>
+                    <a class="dropdown-item" href="register.jsp ">Tecnicos</a>
 
                     <div class="dropdown-divider"></div>
                     <h6 class="dropdown-header">Otros Usuarios</h6>
-                    <a class="dropdown-item" href="404.html">Proveedores</a>
+                    <a class="dropdown-item" href="404.jsp">Proveedores</a>
 
                 </div>
 
@@ -151,7 +151,7 @@
 
                     <div class="dropdown-divider"></div>
                     <h6 class="dropdown-header">Otras Acciones</h6>
-                    <a class="dropdown-item" href="404.html ">Funcionamiento</a>
+                    <a class="dropdown-item" href="404.jsp ">Funcionamiento</a>
 
                 </div>
 
@@ -168,8 +168,8 @@
                     <a class="dropdown-item" id="btnGenerarOrdenMantto" name="btnGenerarOrdenMantto" href="#" role="button">Orden de Trabajo</a>
                     <div class="dropdown-divider"></div>
                     <h6 class="dropdown-header">Otras Funciones:</h6>
-                    <a class="dropdown-item" href="404.html">Ver Status Mantto</a>
-                    <a class="dropdown-item" href="blank.html">Eliminar Orgen</a>
+                    <a class="dropdown-item" href="404.jsp">Ver Status Mantto</a>
+                    <a class="dropdown-item" href="blank.jsp">Eliminar Orgen</a>
                 </div>
 
             </li>
@@ -247,7 +247,7 @@
                     <!--    <div class="card-header">
                         <i class="fas fa-chart-area"></i> AREA PRINCIPAL</div>-->
 
-                    <iframe frameborder="0" style="width: 100%; height: 1000px; position: relative;" id="FrameId" name="FrameId" scrolling="si" src="Graficas.html"></iframe>
+                    <iframe frameborder="0" style="width: 100%; height: 1000px; position: relative;" id="FrameId" name="FrameId" scrolling="si" src="Graficas.jsp"></iframe>
 
 
 
