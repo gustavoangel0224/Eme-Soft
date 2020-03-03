@@ -245,7 +245,7 @@
                             <span class="text-center badge badge-warning"><i class="fas fa-plus"></i>Programar Mantenimiento</span>
                             <div class="">
 
-                                <form action="">
+                                <form action="OrderMaintenanceServlet" method="post">
                                     <!-- datos de mantto-->
                                     <div class="form-group">
 
@@ -267,19 +267,19 @@
                                         </div>
                                         <div class="form-group col-md-3 text-center">
                                             <label for="formControl">Fecha Actual</label>
-                                            <input type="date" class="form-control" placeholder="" readonly>
+                                            <input type="date" name="DateCurrent" class="form-control" placeholder="">
                                         </div>
                                         <div class="form-group col-md-3 text-center">
                                             <label for="formControl">Fecha Programada</label>
-                                            <input type="date" class="form-control" placeholder="">
+                                            <input type="date" name="DateProgram" class="form-control" placeholder="">
                                         </div>
                                         <div class="form-group col-md-3 text-center">
                                             <label for="formControl"><strong>Tipo de Mantto</strong></label>
-                                            <select id="SelectTipoMantto" class="form-control" title="Selecciona el tipo de mantenimiento que se debe de realizar">
-                                            <option class="alert alert-secondary" selected>Mantto Preventivo</option>
-                                            <option class="alert alert-success" selected>Mantto Predictivo</option>
+                                            <select id="SelectTipoMantto" name="KindOfMantto" class="form-control" title="Selecciona el tipo de mantenimiento que se debe de realizar">
+                                            <option value="Mantto Preventivo" class="alert alert-secondary" selected>Mantto Preventivo</option>
+                                            <option value="Mantto Predictivo" class="alert alert-success" >Mantto Predictivo</option>
                                             
-                                            <option class="alert alert-danger">Mantto Correctivo</option>
+                                            <option value="Mantto Correctivo" class="alert alert-danger">Mantto Correctivo</option>
                                             
                                            
                                           </select>
@@ -294,7 +294,7 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">ID-Maquina</div>
                                                 </div>
-                                                <input type="text" class="form-control" id="ShowIdMaquina" placeholder="" readonly>
+                                                <input type="text" name="IdMachine" class="form-control" id="ShowIdMaquina" placeholder="">
                                             </div>
                                         </div>
 
@@ -312,7 +312,7 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">ID-Tecnico</div>
                                                 </div>
-                                                <input type="text" class="form-control" id="ShowIdUsuario" placeholder="" readonly>
+                                                <input type="text" name="IdUser" class="form-control" id="ShowIdUsuario" placeholder="">
                                             </div>
                                         </div>
                                         <div class="form-group col-md-3">
@@ -333,7 +333,7 @@
                                                     <div class="input-group-text">Realizar Mantenimiento Cada</div>
                                                 </div>
 
-                                                <select id="ShowNombreMaquina" class="form-control" title="Selecciona la maquina a la que se le realizara los trabajos">
+                                                <select id="ShowNombreMaquina" name="RepeatMantto" class="form-control" title="Selecciona el tiempo para la maquina a la que se le realizara los trabajos">
                                                         <option>Selecciona Tiempo..</option>
                                                         <option value="2">2 meses</option>
                                                         <option value="4">4 meses</option>
@@ -350,14 +350,14 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">Ubicacion de Maquina en la planta</div>
                                                 </div>
-                                                <input type="text" class="form-control" id="ShowUbiMaquina" placeholder="" readonly>
+                                                <input type="text" name="UbicationMachine" class="form-control" id="ShowUbiMaquina" placeholder="" readonly>
                                             </div>
                                         </div>
                                     </div>
                                     <hr class="my-4">
                                     <div class="form-group text-center">
                                         <label for="FormControlDesDeTrabajo" class="badge badge-light">Descripcion de los pasos del Mantenimeinto</label>
-                                        <textarea class="form-control border border-warning" id="FormControlDesDeTrabajo" rows="2" placeholder="1. Realizar mediciones de entradas de voltaje          /        2. Checar todos los parametros       /        3. Limpieza de polvos y particulas"></textarea>
+                                        <textarea class="form-control border border-warning" name="DescriptionWork" id="FormControlDesDeTrabajo" rows="2" placeholder="1. Realizar mediciones de entradas de voltaje          /        2. Checar todos los parametros       /        3. Limpieza de polvos y particulas"></textarea>
                                     </div>
 
                                     <div class="form-row">
@@ -367,7 +367,7 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">Personal/Mantto</div>
                                                 </div>
-                                                <select class="custom-select mr-sm-2" id="NumPersonasTabrajo" title="Personas necesarias para el trabajo">
+                                                <select class="custom-select mr-sm-2" id="NumPersonasTabrajo" name="PeopleNeeds" title="Personas necesarias para el trabajo">
                                                   <option selected>Numero Personas...</option>
                                                   <option value="1">1 persona</option>
                                                   <option value="2">2 persona</option>
@@ -441,7 +441,7 @@
 
 
 
-                                    <button type="submit" class="btn btn-warning btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">Confirmar Programacion de Mantenimiento</button>
+                                    <button type="submit" class="btn btn-warning btn-lg btn-block" data-toggle="modal " data-target="#exampleModal ">Confirmar Programacion de Mantenimiento</button>
                                 </form>
 
                             </div>

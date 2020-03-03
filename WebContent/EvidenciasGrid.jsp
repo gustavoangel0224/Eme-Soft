@@ -245,7 +245,7 @@
                                 <span class="text-center badge badge-secondary"><i class="fas fa-plus"></i> Agregar Evidencia Realizada</span>
                                 <div class="">
 
-                                    <form action="">
+                                    <form action="EvidenciaServlet" method="POST">
                                         <!-- datos de mantto-->
                                         <div class="form-group">
 
@@ -263,22 +263,22 @@
 
                                             <div class="form-group col-md-3 text-center">
                                                 <label for="formControl">Id - Evidencia</label>
-                                                <input class="form-control" type="text" placeholder="" readonly>
+                                                <input class="form-control" name="IdEvidence" type="text" placeholder="" readonly>
                                             </div>
                                             <div class="form-group col-md-3 text-center">
                                                 <label for="formControl">Fecha Actual</label>
-                                                <input type="date" class="form-control" placeholder="" readonly>
+                                                <input type="date" name="CurrentDate" class="form-control" placeholder="">
                                             </div>
                                             <div class="form-group col-md-3 text-center">
                                                 <label for="formControl">Orden de Trabajo/Mantto</label>
-                                                <input type="Text" class="form-control" placeholder="">
+                                                <input type="Text" name="OrderWork" class="form-control" placeholder="">
                                             </div>
                                             <div class="form-group col-md-3 text-center">
                                                 <label for="formControl"><strong>Status</strong></label>
-                                                <select id="SelectStatusMantto" class="form-control" title="Selecciona el status que tendra la orden de trabajo">
-                                            <option value="">Detenido por Falta de Materiales</option>
-                                            <option value="">Detenido</option>                                           
-                                            <option class="alert alert-success" selected>Completado 100%</option>
+                                                <select id="SelectStatusMantto" name="statu" class="form-control" title="Selecciona el status que tendra la orden de trabajo">
+                                            <option value="Detenido por falta de materiales">Detenido por Falta de Materiales</option>
+                                            <option value="Detenido">Detenido</option>                                           
+                                            <option value="Completado"class="alert alert-success" selected>Completado 100%</option>
 
                                           </select>
 
@@ -292,7 +292,7 @@
                                                     <div class="input-group-prepend">
                                                         <div class="input-group-text">ID-Maquina</div>
                                                     </div>
-                                                    <input type="text" class="form-control" id="ShowIdMaquina" placeholder="" readonly>
+                                                    <input type="text" name="IdMachine" class="form-control" id="ShowIdMaquina" placeholder="">
                                                 </div>
                                             </div>
 
@@ -309,7 +309,7 @@
                                                     <div class="input-group-prepend">
                                                         <div class="input-group-text">ID-Tecnico</div>
                                                     </div>
-                                                    <input type="text" class="form-control" id="ShowIdUsuario" placeholder="" readonly>
+                                                    <input type="text" name="IdUser" class="form-control" id="ShowIdUsuario" placeholder="">
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-3 text-center">
@@ -392,7 +392,7 @@
                                         <div class="row justify-content-md-center">
                                             <div class="col-md-8 text-center">
                                                 <label for="FormControlDesDeTrabajo" class="badge badge-light">Agregar Algunos Notas</label>
-                                                <textarea class="form-control border border-warning" id="FormControlDesDeTrabajo" rows="1" placeholder=""></textarea>
+                                                <textarea class="form-control border border-warning" id="FormControlDesDeTrabajo" name="DescripcionEvidence" rows="1" placeholder=""></textarea>
                                                 <p></p>
                                             </div>
                                         </div>
@@ -404,7 +404,7 @@
                                                     <div class="input-group-prepend">
                                                         <div class="input-group-text">Horas Empleadas</div>
                                                     </div>
-                                                    <input type="time" class="form-control" id="ShowUserTec" placeholder="">
+                                                    <input type="text" class="form-control" id="HoursDedicate" name="HoursDedicate" placeholder="">
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-4 text-center">
@@ -421,9 +421,7 @@
 
                                         <!-- division linea -->
 
-
-
-                                        <button type="submit" class="btn btn-secondary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">Subir Evidencia</button>
+                                        <button type="submit" class="btn btn-secondary btn-lg btn-block" data-toggle="modal " data-target="#exampleModal ">Subir Evidencia</button>
                                     </form>
 
                                 </div>
@@ -450,7 +448,7 @@
 
     </div>
     <!-- /#wrapper -->
-    <!-- Modal de confirmacion de formulario usuario -->
+    <!-- Modal de confirmacion de formulario evidencias -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
