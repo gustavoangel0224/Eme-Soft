@@ -123,21 +123,21 @@ public class OrdMaintenance {
 		this.PeopleNeeds = peopleNeeds;
 	}
 
-	public int getIdMachine() {
-		return IdMachine;
-	}
+	//public int getIdMachine() {
+	//	return IdMachine;
+	//}
 
-	public void setIdMachine(int idMachine) {
-		this.IdMachine = idMachine;
-	}
+	//public void setIdMachine(int idMachine) {
+	//	this.IdMachine = idMachine;
+	//}
 
-	public int getIdUser() {
-		return IdUser;
-	}
+	//public int getIdUser() {
+	//	return IdUser;
+	//}
 
-	public void setIdUser(int idUser) {
-		this.IdUser = idUser;
-	}
+	//public void setIdUser(int idUser) {
+	//	this.IdUser = idUser;
+	//}
 	
 	
 	

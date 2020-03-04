@@ -19,22 +19,21 @@ $(document).ready(function() {
     });
     //modalsalirIframe
 
-    $("#btnPanelUser").click(function(event) {
+    $("#btnPanelUser").click(function(e) {
 
         var actual = $('#FrameId');
         var url1 = actual.attr('src');
 
         var frame = $('#FrameId');
-        var url = 'UsuariosGrid.html';
+        var url = 'EmployeeRegister.jsp';
 
         if (url != url1) {
             var mensaje = confirm(" Salir del Vista Actual ?");
             if (mensaje) {
-                frame.attr('src', url).show();
-
+            	alert("hola entraste a usuarios")
+                frame.attr('src', url).show();          
+            	}
             }
-        }
-
     });
     $("#sbtnPanelUser").click(function(e) {
         //alert(src);

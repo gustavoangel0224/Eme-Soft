@@ -125,7 +125,7 @@
                     <a class="dropdown-item" id="btnPanelUser" name="btnPanelUser" href="#" role="button">Usuarios</a>
                     <!--se agrega para salida iframe-->
                     <h6 class="dropdown-header">Ver Principales</h6>
-                    <a class="dropdown-item" href="login.jsp ">Ingenieros</a>
+                    <a class="dropdown-item" href="login.jsp">Ingenieros</a>
 
                     <a class="dropdown-item" href="register.jsp ">Tecnicos</a>
 
@@ -799,15 +799,12 @@
 
         <!-- Core plugin JavaScript-->
         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
         <!-- Page level plugin JavaScript-->
         <script src="vendor/chart.js/Chart.min.js"></script>
         <script src="vendor/datatables/jquery.dataTables.js"></script>
         <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-
         <!-- Custom scripts for all pages-->
         <script src="js/sb-admin.min.js"></script>
-
         <!-- Demo scripts for this page-->
         <script src="js/demo/datatables-demo.js"></script>
         <script src="js/demo/chart-area-demo.js"></script>
