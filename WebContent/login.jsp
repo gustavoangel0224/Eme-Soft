@@ -3,7 +3,7 @@
 
 
 <head>
-    <title> Eme soft: inicio de sesión
+    <title> Eme soft: inicio de sesion
     </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,15 +55,15 @@
 
                                             <div class="form-label-group">
                                                 <input type="password" id="inputPassword" class="form-control " placeholder="Password" required>
-                                                <label for="inputPassword">Contraseña</label>
+                                                <label for="inputPassword">Contrase�a</label>
                                             </div>
 
                                             <div class="custom-control custom-checkbox mb-3">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                <label class="custom-control-label" for="customCheck1">Recordar Contraseña</label>
+                                                <label class="custom-control-label" for="customCheck1">Recordar Contrase�a</label>
                                             </div>
-                                            <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit ">Iniciar sesion</button>
-                                            <a class="small" href="index1.1.html ">iniciar sesion</a>
+                                            <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button" onclick="window.location.href='Index.jsp'" href="Index.jsp">Iniciar Sesion</button>
+                                        
                                         </form>
                                     </div>
                                     <!-- inicio de sesion tecnico-->
@@ -78,15 +78,16 @@
 
                                             <div class="form-label-group">
                                                 <input type="password" id="inputPassword1" class="form-control" placeholder="Password " required>
-                                                <label for="inputPassword1">Contraseña</label>
+                                                <label for="inputPassword1">Contrase�a</label>
                                             </div>
 
                                             <div class="custom-control custom-checkbox mb-3">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                <label class="custom-control-label" for="customCheck1 ">Recordar Contraseña</label>
+                                                <label class="custom-control-label" for="customCheck1 ">Recordar Contrase�a</label>
                                             </div>
-                                            <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Iniciar Sesion</button>
-                                            <a class="small" href="index1.1.html">iniciar sesion</a>
+                                           
+                                            <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button" onclick="window.location.href='Index.jsp'">Iniciar Sesion</button>
+                                          
                                         </form>
                                     </div>
 
